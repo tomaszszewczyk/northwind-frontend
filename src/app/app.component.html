@@ -1,0 +1,60 @@
+<h1>{{title}}</h1>
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Categories</a>
+    <ng-template ngbNavContent>
+      <app-categories></app-categories>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Customers</a>
+    <ng-template ngbNavContent>
+      <app-customers></app-customers>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>Employees</a>
+    <ng-template ngbNavContent>
+      <app-employees></app-employees>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="4">
+    <a ngbNavLink>Orders</a>
+    <ng-template ngbNavContent>
+      <app-orders></app-orders>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="5">
+    <a ngbNavLink>Products</a>
+    <ng-template ngbNavContent>
+      <p>Products</p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="6">
+    <a ngbNavLink>Regions</a>
+    <ng-template ngbNavContent>
+      <p>Regions</p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="7">
+    <a ngbNavLink>Shippers</a>
+    <ng-template ngbNavContent>
+      <p>Shippers</p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="8">
+    <a ngbNavLink>Suppliers</a>
+    <ng-template ngbNavContent>
+      <p>Suppliers</p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="9">
+    <a ngbNavLink>Territories</a>
+    <ng-template ngbNavContent>
+      <p>Territories</p>
+    </ng-template>
+  </li>
+</ul>
+<hr>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

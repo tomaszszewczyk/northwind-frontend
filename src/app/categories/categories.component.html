@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-between">
+  <h2>Categories</h2>
+  <span *ngIf="loading">loading...</span>
+  <button type="button" class="btn btn-primary">Add</button>
+</div>
+<table class="table table-bordered mt-1">
+  <thead>
+  <tr>
+    <th scope="col" style="white-space: nowrap; width: 1%;">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Description</th>
+    <th scope="col" style="white-space: nowrap; width: 1%;">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let category of categories">
+    <th scope="row">{{category.categoryID}}</th>
+    <td>{{category.categoryName}}</td>
+    <td>{{category.description}}</td>
+    <td>
+      <div class="d-inline-flex">
+        <button type="button" class="btn btn-primary btn-sm mr-1 float-right">Details</button>
+        <button type="button" class="btn btn-warning btn-sm mr-1 float-right">Edit</button>
+        <button type="button" class="btn btn-danger btn-sm mr-1 float-right">Remove</button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
